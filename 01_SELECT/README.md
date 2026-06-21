@@ -3,7 +3,6 @@
 ## Definición
 
 La cláusula SELECT define qué información será devuelta por una consulta.
-
 Normalmente se utiliza para seleccionar columnas específicas o todas las columnas de una tabla.
 ---
 
@@ -63,6 +62,14 @@ FROM Clientes;
 
 ## Pensamiento de Ingeniería de Datos
 
-SELECT responde:
+SELECT responde a la pregunta:
 
 ¿Qué información necesito obtener?
+
+FROM responde:
+
+¿De dónde obtendré esa información?
+
+WHERE responde:
+
+¿Qué condiciones deben cumplir los datos?
