@@ -1,0 +1,444 @@
+# FUNCIONES AGREGADAS
+
+## Definición
+
+Las funciones agregadas permiten resumir múltiples filas en un único resultado.
+
+Son utilizadas para transformar grandes volúmenes de datos en información útil para el análisis, la generación de reportes y la toma de decisiones.
+
+Las funciones agregadas más utilizadas son:
+
+* COUNT()
+* SUM()
+* AVG()
+* MIN()
+* MAX()
+
+---
+
+## Conceptos clave
+
+Las funciones agregadas responden preguntas como:
+
+* ¿Cuántos registros existen?
+* ¿Cuál es el total acumulado?
+* ¿Cuál es el promedio?
+* ¿Cuál es el valor mínimo?
+* ¿Cuál es el valor máximo?
+
+Estas funciones operan sobre conjuntos de filas y devuelven un único resultado.
+
+---
+
+## Sintaxis
+
+### COUNT
+
+```sql
+SELECT COUNT(*)
+FROM Clientes;
+```
+
+### SUM
+
+```sql
+SELECT SUM(Saldo)
+FROM Cuentas;
+```
+
+### AVG
+
+```sql
+SELECT AVG(Saldo)
+FROM Cuentas;
+```
+
+### MIN
+
+```sql
+SELECT MIN(Saldo)
+FROM Cuentas;
+```
+
+### MAX
+
+```sql
+SELECT MAX(Saldo)
+FROM Cuentas;
+```
+
+---
+
+# COUNT()
+
+## Problema
+
+¿Cuántos clientes existen en el banco?
+
+### Datos
+
+Tabla:
+
+```text
+Clientes
+```
+
+### Lógica
+
+Contar todos los registros existentes.
+
+### SQL
+
+```sql
+SELECT COUNT(*)
+FROM Clientes;
+```
+
+### Resultado esperado
+
+```text
+150
+```
+
+Significa:
+
+```text
+Existen 150 clientes registrados.
+```
+
+---
+
+# SUM()
+
+## Problema
+
+¿Cuál es el saldo total administrado por el banco?
+
+### Datos
+
+Tabla:
+
+```text
+Cuentas
+```
+
+Columna:
+
+```text
+Saldo
+```
+
+### Lógica
+
+Sumar todos los saldos.
+
+### SQL
+
+```sql
+SELECT SUM(Saldo)
+FROM Cuentas;
+```
+
+### Resultado esperado
+
+```text
+1,250,000
+```
+
+---
+
+# AVG()
+
+## Problema
+
+¿Cuál es el saldo promedio de los clientes?
+
+### Datos
+
+Tabla:
+
+```text
+Cuentas
+```
+
+Columna:
+
+```text
+Saldo
+```
+
+### Lógica
+
+Calcular el promedio de los saldos.
+
+### SQL
+
+```sql
+SELECT AVG(Saldo)
+FROM Cuentas;
+```
+
+### Resultado esperado
+
+```text
+8,500
+```
+
+---
+
+# MIN()
+
+## Problema
+
+¿Cuál es el saldo más bajo registrado?
+
+### Datos
+
+Tabla:
+
+```text
+Cuentas
+```
+
+Columna:
+
+```text
+Saldo
+```
+
+### Lógica
+
+Buscar el valor mínimo.
+
+### SQL
+
+```sql
+SELECT MIN(Saldo)
+FROM Cuentas;
+```
+
+### Resultado esperado
+
+```text
+100
+```
+
+---
+
+# MAX()
+
+## Problema
+
+¿Cuál es el saldo más alto registrado?
+
+### Datos
+
+Tabla:
+
+```text
+Cuentas
+```
+
+Columna:
+
+```text
+Saldo
+```
+
+### Lógica
+
+Buscar el valor máximo.
+
+### SQL
+
+```sql
+SELECT MAX(Saldo)
+FROM Cuentas;
+```
+
+### Resultado esperado
+
+```text
+95,000
+```
+
+---
+
+## Casos de uso reales
+
+### Cantidad de clientes
+
+```sql
+SELECT COUNT(*)
+FROM Clientes;
+```
+
+Caso:
+
+```text
+Conocer el número total de clientes registrados.
+```
+
+---
+
+### Saldo total del banco
+
+```sql
+SELECT SUM(Saldo)
+FROM Cuentas;
+```
+
+Caso:
+
+```text
+Determinar los fondos administrados.
+```
+
+---
+
+### Promedio de saldos
+
+```sql
+SELECT AVG(Saldo)
+FROM Cuentas;
+```
+
+Caso:
+
+```text
+Analizar el comportamiento financiero promedio.
+```
+
+---
+
+### Primera transacción registrada
+
+```sql
+SELECT MIN(FechaTransaccion)
+FROM Transacciones;
+```
+
+Caso:
+
+```text
+Identificar el inicio histórico de operaciones.
+```
+
+---
+
+### Transacción más grande
+
+```sql
+SELECT MAX(Monto)
+FROM Transacciones;
+```
+
+Caso:
+
+```text
+Detectar operaciones de alto valor.
+```
+
+---
+
+## Error común
+
+❌ Incorrecto
+
+```sql
+SELECT Nombre, COUNT(*)
+FROM Clientes;
+```
+
+✔ Correcto
+
+```sql
+SELECT COUNT(*)
+FROM Clientes;
+```
+
+O utilizando GROUP BY:
+
+```sql
+SELECT Nombre, COUNT(*)
+FROM Clientes
+GROUP BY Nombre;
+```
+
+---
+
+## Error conceptual frecuente
+
+Muchos principiantes creen que:
+
+```sql
+COUNT(*)
+```
+
+cuenta columnas.
+
+Incorrecto.
+
+COUNT(*) cuenta filas.
+
+Ejemplo:
+
+```sql
+SELECT COUNT(*)
+FROM Clientes;
+```
+
+Pregunta:
+
+```text
+¿Cuántos registros existen?
+```
+
+---
+
+## Pensamiento de Ingeniería de Datos
+
+Antes de utilizar una función agregada pregúntate:
+
+1. ¿Necesito contar registros?
+2. ¿Necesito sumar valores?
+3. ¿Necesito calcular un promedio?
+4. ¿Necesito encontrar el mínimo?
+5. ¿Necesito encontrar el máximo?
+
+---
+
+## Relación entre conceptos
+
+```text
+SELECT     → Qué información necesito obtener
+FROM       → De dónde obtendré la información
+WHERE      → Qué registros necesito
+JOIN       → Cómo relacionar datos
+AGREGACIÓN → Cómo resumir datos
+```
+
+---
+
+## Resumen
+
+Funciones agregadas principales:
+
+```sql
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+```
+
+Permiten transformar grandes volúmenes de datos en información útil para:
+
+* Reportes
+* Dashboards
+* Business Intelligence
+* Data Analytics
+* Data Engineering
+* Auditorías
+* Toma de decisiones
+* Sistemas bancarios
