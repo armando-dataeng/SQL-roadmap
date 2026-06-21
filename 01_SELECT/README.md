@@ -2,8 +2,7 @@
 
 ## Definición
 
-La cláusula SELECT define qué información será devuelta por una consulta.
-Normalmente se utiliza para seleccionar columnas específicas o todas las columnas de una tabla.
+La cláusula SELECT define qué información será devuelta por una consulta. Normalmente se utiliza para seleccionar columnas específicas o todas las columnas de una tabla.
 ---
 
 ## Sintaxis
