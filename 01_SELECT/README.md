@@ -212,7 +212,7 @@ WHERE Activo = 1;
 
 ---
 
-### Casos de uso reales
+## Casos de uso reales
 
 Obtener los nombres de todos los clientes registrados.
 ```sql
