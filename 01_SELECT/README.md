@@ -14,13 +14,32 @@ Normalmente se utiliza para seleccionar columnas específicas o todas las column
 
 > ¿Qué información necesito obtener?
 
-`SELECT` controla las columnas que serán devueltas por la consulta.
+`SELECT` controla qué información será devuelta por una consulta.
 
-No controla:
+Puede devolver:
 
-- De dónde vienen los datos → `FROM`
-- Qué filas serán filtradas → `WHERE`
-- Cómo serán ordenados los resultados → `ORDER BY`
+- Una columna
+- Varias columnas
+- Todas las columnas mediante (*)
+- Expresiones
+- Resultados de funciones
+
+Ejemplos:
+
+```sql
+SELECT Nombre
+FROM Clientes;
+```
+
+```sql
+SELECT Nombre, Apellido
+FROM Clientes;
+```
+
+```sql
+SELECT *
+FROM Clientes;
+```
 
 ---
 
@@ -41,12 +60,21 @@ Mostrar el nombre de todos los clientes.
 
 ### Datos
 
-Tabla: `Clientes`  
-Columna: `Nombre`
+Tabla:
+
+```text
+Clientes
+```
+
+Columna:
+
+```text
+Nombre
+```
 
 ### Lógica
 
-Recuperar únicamente la columna `Nombre`.
+Recuperar únicamente la columna Nombre.
 
 ### SQL
 
@@ -61,16 +89,27 @@ FROM Clientes;
 
 ### Problema
 
-Mostrar nombre, apellido y correo electrónico de los clientes.
+Mostrar nombre, apellido y correo electrónico de todos los clientes.
 
 ### Datos
 
-Tabla: `Clientes`  
-Columnas: `Nombre`, `Apellido`, `Email`
+Tabla:
+
+```text
+Clientes
+```
+
+Columnas:
+
+```text
+Nombre
+Apellido
+Email
+```
 
 ### Lógica
 
-Recuperar únicamente las columnas necesarias para identificar y contactar clientes.
+Recuperar únicamente las columnas necesarias para identificar y contactar a los clientes.
 
 ### SQL
 
@@ -82,11 +121,15 @@ SELECT
 FROM Clientes;
 ```
 
+### Explicación
+
+`SELECT` puede devolver una o múltiples columnas dependiendo de la necesidad del problema.
+
 ---
 
 ## Uso del asterisco (*)
 
-El asterisco `*` significa:
+El símbolo `*` significa:
 
 > Devuelve todas las columnas disponibles.
 
@@ -97,29 +140,44 @@ SELECT *
 FROM Clientes;
 ```
 
+### Ventajas
+
+- Exploración rápida de datos.
+- Aprendizaje.
+- Pruebas rápidas.
+
+### Desventajas
+
+- Menor rendimiento.
+- Menor claridad.
+- Dependencia de cambios en el esquema.
+
 ### Consideración profesional
 
-Aunque `SELECT *` es útil para exploración y aprendizaje, en entornos profesionales suele preferirse seleccionar solo las columnas necesarias.
+En entornos profesionales suele preferirse especificar únicamente las columnas necesarias.
 
-Esto mejora:
+Ejemplo:
 
-- Legibilidad
-- Seguridad
-- Rendimiento
-- Mantenimiento de consultas
+```sql
+SELECT
+    Nombre,
+    Apellido,
+    Email
+FROM Clientes;
+```
 
 ---
 
 ## Error común
 
-❌ Incorrecto:
+❌ Incorrecto
 
 ```sql
 SELECT
 FROM Clientes;
 ```
 
-✔ Correcto:
+✔ Correcto
 
 ```sql
 SELECT Nombre
@@ -132,11 +190,11 @@ FROM Clientes;
 
 Un error común es pensar que `SELECT` controla las filas.
 
-Eso es incorrecto.
+Incorrecto.
 
-`SELECT` controla qué columnas o expresiones se devuelven.
+`SELECT` controla las columnas o expresiones que serán devueltas.
 
-Las filas se controlan con `WHERE`.
+Las filas son controladas mediante la cláusula `WHERE`.
 
 Ejemplo:
 
@@ -146,11 +204,11 @@ FROM Clientes
 WHERE Activo = 1;
 ```
 
-Aquí:
+### Explicación
 
-- `SELECT Nombre` indica qué columna se devuelve.
-- `FROM Clientes` indica la tabla origen.
-- `WHERE Activo = 1` indica qué filas cumplen la condición.
+- `SELECT` define qué información mostrar.
+- `FROM` define de dónde provienen los datos.
+- `WHERE` define qué registros cumplen la condición.
 
 ---
 
@@ -161,10 +219,18 @@ Antes de escribir una consulta, piensa:
 1. ¿Qué problema necesito resolver?
 2. ¿Qué datos existen?
 3. ¿Qué información necesito obtener?
-4. ¿Qué SQL representa esa lógica?
+4. ¿Cómo represento esa lógica en SQL?
 
-En una consulta básica:
+### Relación entre cláusulas
 
-- `SELECT` responde: ¿Qué información necesito obtener?
-- `FROM` responde: ¿De dónde obtendré esa información?
-- `WHERE` responde: ¿Qué condiciones deben cumplir los datos?
+`SELECT` responde:
+
+> ¿Qué información necesito obtener?
+
+`FROM` responde:
+
+> ¿De dónde obtendré esa información?
+
+`WHERE` responde:
+
+> ¿Qué condiciones deben cumplir los datos?
