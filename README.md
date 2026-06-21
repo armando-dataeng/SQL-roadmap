@@ -57,6 +57,8 @@ Cada tema se documenta utilizando el siguiente enfoque:
 - [ ] LEFT JOIN
 - [ ] RIGHT JOIN
 - [ ] FULL JOIN
+- [ ] SELF JOIN
+- [ ] CROSS JOIN
 
 ### Agregaciones
 
