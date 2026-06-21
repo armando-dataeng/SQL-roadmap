@@ -212,6 +212,24 @@ WHERE Activo = 1;
 
 ---
 
+### Casos de uso reales
+
+Obtener los nombres de todos los clientes registrados.
+```sql
+SELECT Nombre
+FROM Clientes;
+```
+Generar un listado de contacto para campañas de comunicación.
+```sql
+SELECT Nombre, Email
+FROM Clientes;
+```
+Explorar rápidamente la estructura y contenido de una tabla.
+```sql
+SELECT *
+FROM Clientes;
+```
+---
 ## Pensamiento de Ingeniería de Datos
 
 Antes de escribir una consulta, piensa:
