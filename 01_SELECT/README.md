@@ -234,3 +234,21 @@ Antes de escribir una consulta, piensa:
 `WHERE` responde:
 
 > ¿Qué condiciones deben cumplir los datos?
+
+## Resumen
+
+SELECT es la cláusula encargada de definir qué información será devuelta por una consulta.
+
+Puede devolver:
+
+- Una columna
+- Varias columnas
+- Todas las columnas mediante (*)
+- Expresiones
+- Funciones
+
+SELECT no controla:
+
+- El origen de los datos (FROM)
+- El filtrado de filas (WHERE)
+- El ordenamiento (ORDER BY)
