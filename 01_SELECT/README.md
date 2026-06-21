@@ -41,11 +41,14 @@ Recuperar únicamente la columna Nombre.
 SELECT Nombre
 FROM Clientes;
 ```
+### Ejemplo
+```sql
 SELECT
     Nombre,
     Apellido,
     Email
 FROM Clientes;
+
 Explicacion: SELECT puede devolver una o múltiples columnas.
 ---
 
