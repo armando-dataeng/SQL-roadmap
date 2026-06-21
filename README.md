@@ -78,11 +78,18 @@ Cada tema se documenta utilizando el siguiente enfoque:
 - [ ] Subqueries
 - [ ] CTEs
 - [ ] Window Functions
+- [ ] Vistas
+- [ ] Procedimiento almacenado
+- [ ] Funciones
+- [ ] Disparadores
+- [ ] Transsacciones 
 
 ### DBA
 
 - [ ] Índices
 - [ ] Optimización
+- [ ] TEMP_TABLES
+- [ ] DYNAMIC_SQL
 - [ ] Planes de ejecución
 
 ---
