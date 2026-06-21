@@ -43,6 +43,8 @@ Cada tema se documenta utilizando el siguiente enfoque:
 - [ ] SELECT
 - [ ] FROM
 - [ ] WHERE
+- [ ] OPERADORES_COMPARACION
+- [ ] OPERADORES_LOGICOS
 - [ ] LIKE
 - [ ] BETWEEN
 - [ ] ORDER BY
