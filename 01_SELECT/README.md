@@ -4,6 +4,7 @@
 
 La cláusula SELECT define qué información será devuelta por una consulta. 
 
+
 Normalmente se utiliza para seleccionar columnas específicas o todas las columnas de una tabla.
 ---
 
@@ -40,7 +41,12 @@ Recuperar únicamente la columna Nombre.
 SELECT Nombre
 FROM Clientes;
 ```
-
+SELECT
+    Nombre,
+    Apellido,
+    Email
+FROM Clientes;
+Explicacion: SELECT puede devolver una o múltiples columnas.
 ---
 
 ## Error común
