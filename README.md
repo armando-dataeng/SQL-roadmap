@@ -1,100 +1,180 @@
-# 📘 SQL Roadmap
+#  SQL Roadmap
+![SQL Server](https://img.shields.io/badge/SQL%20Server-51%20Modules-red)
+![Status](https://img.shields.io/badge/Status-In%20Progress-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-Repositorio que documenta mi aprendizaje de SQL Server desde los fundamentos hasta conceptos utilizados por DBAs, Data Analysts e Ingenieros de Datos.
+Repositorio que documenta mi aprendizaje de SQL Server desde los fundamentos hasta conceptos avanzados utilizados por Database Administrators (DBAs), Data Engineers, Backend Developers y Data Analysts.
+
+Este roadmap combina teoría, ejemplos prácticos, buenas prácticas y escenarios reales para desarrollar habilidades aplicables en entornos de producción.
 
 ---
 
-## 🎯 Objetivos
+#  Objetivos
 
 - Aprender SQL de forma estructurada.
-- Comprender el pensamiento de un DBA.
-- Desarrollar habilidades de Ingeniería de Datos.
+- Comprender cómo funciona un motor de base de datos.
+- Escribir consultas eficientes y optimizadas.
+- Diseñar soluciones utilizando SQL.
+- Comprender el trabajo de un DBA.
+- Aprender conceptos utilizados por Data Engineers.
 - Construir un portafolio técnico demostrable.
-- Resolver problemas reales utilizando SQL Server.
 
 ---
 
-## 🏦 Base de Datos Utilizada
+#  Base de Datos Utilizada
 
-Proyecto bancario compuesto por las siguientes tablas:
+Todo el roadmap utiliza una base de datos bancaria ficticia compuesta por entidades como:
 
 - Clientes
 - Cuentas
 - Transacciones
+- Tarjetas
+- Préstamos
+- Empleados
+- Sucursales
 - Usuarios
+- Auditoría
+
+Este modelo permite resolver ejercicios similares a escenarios encontrados en empresas reales.
 
 ---
 
-## 🧠 Metodología
+#  Metodología
 
-Cada tema se documenta utilizando el siguiente enfoque:
+Cada módulo sigue la misma estructura:
 
-1. Problema
-2. Datos
-3. Lógica
-4. SQL
-
----
-
-## 📚 Roadmap
-
-### Fundamentos
-
-- [ ] SELECT
-- [ ] FROM
-- [ ] WHERE
-- [ ] OPERADORES_COMPARACION
-- [ ] OPERADORES_LOGICOS
-- [ ] LIKE
-- [ ] BETWEEN
-- [ ] ORDER BY
-- [ ] TOP
-- [ ] OFFSET
-
-### Relaciones
-
-- [ ] INNER JOIN
-- [ ] LEFT JOIN
-- [ ] RIGHT JOIN
-- [ ] FULL JOIN
-- [ ] SELF JOIN
-- [ ] CROSS JOIN
-
-### Agregaciones
-
-- [ ] COUNT
-- [ ] SUM
-- [ ] AVG
-- [ ] MIN
-- [ ] MAX
-
-### Agrupación
-
-- [ ] GROUP BY
-- [ ] HAVING
-
-### SQL Avanzado
-
-- [ ] Subqueries
-- [ ] CTEs
-- [ ] Window Functions
-- [ ] Vistas
-- [ ] Procedimiento almacenado
-- [ ] Funciones
-- [ ] Disparadores
-- [ ] Transsacciones 
-
-### DBA
-
-- [ ] Índices
-- [ ] Optimización
-- [ ] TEMP_TABLES
-- [ ] DYNAMIC_SQL
-- [ ] Planes de ejecución
+1. Definición
+2. ¿Por qué existe?
+3. Concepto fundamental
+4. Explicación paso a paso
+5. Ejemplos SQL
+6. Casos reales
+7. Buenas prácticas
+8. Errores comunes
+9. Preguntas de entrevista
+10. Resumen
 
 ---
 
-## 📂 Estructura del Proyecto
+#  Roadmap
+
+## 1. SQL Fundamentals
+
+- SELECT
+- FROM
+- WHERE
+- Comparison Operators
+- Logical Operators
+- LIKE
+- BETWEEN
+- IN
+- IS NULL
+- DISTINCT
+- TOP
+- OFFSET FETCH
+- ORDER BY
+
+---
+
+## 2. SQL Joins
+
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
+- CROSS JOIN
+- SELF JOIN
+
+---
+
+## 3. SQL Aggregations
+
+- COUNT
+- SUM
+- AVG
+- MIN
+- MAX
+- GROUP BY
+- HAVING
+
+---
+
+## 4. Advanced SQL
+
+- CASE
+- CAST
+- CONVERT
+- NULL Handling
+- Subqueries
+- Correlated Subqueries
+- Common Table Expressions (CTEs)
+- Recursive CTEs
+- Window Functions
+- PIVOT
+- UNPIVOT
+- UNION
+- UNION ALL
+- EXISTS
+- ANY
+- ALL
+
+---
+
+## 5. Database Programmability
+
+- Views
+- Stored Procedures
+- Functions
+- Triggers
+- Variables
+- Control Flow
+- Dynamic SQL
+
+---
+
+## 6. Performance Optimization
+
+- Indexes
+- Execution Plans
+- Query Optimization
+- Statistics
+- Temporary Tables
+- Table Variables
+
+---
+
+## 7. Transactions & Concurrency
+
+- Transactions
+- ACID
+- Isolation Levels
+- Locks
+- Deadlocks
+- Error Handling
+
+---
+
+## 8. Database Administration (DBA)
+
+- User Management
+- Roles and Permissions
+- Profiles
+- Backup and Restore
+- Auditing
+- Database Security
+- SQL Injection
+- High Availability
+- Replication
+- Clustering
+- Disaster Recovery
+- Database Monitoring
+- Database Maintenance
+- Database Troubleshooting
+- DBA Best Practices
+
+---
+
+#  Estructura del Proyecto
 
 ```text
 sql-roadmap
@@ -104,25 +184,64 @@ sql-roadmap
 ├── 01_SELECT
 ├── 02_FROM
 ├── 03_WHERE
-├── 04_LIKE
-├── 05_BETWEEN
-├── 06_ORDER_BY
-├── 07_TOP
-├── 08_OFFSET
-│
-└── 09_INNER_JOIN
+├── 04_OPERADORES_COMPARACION
+├── 05_OPERADORES_LOGICOS
+├── 06_LIKE
+├── ...
+├── 40_BACKUP_AND_RESTORE
+├── 41_AUDITING
+├── 42_DATABASE_SECURITY
+├── 43_SQL_INJECTION
+├── 44_HIGH_AVAILABILITY
+├── 45_REPLICATION
+├── 46_CLUSTERING
+├── 47_DISASTER_RECOVERY
+├── 48_DATABASE_MONITORING
+├── 49_DATABASE_MAINTENANCE
+├── 50_DATABASE_TROUBLESHOOTING
+└── 51_DBA_BEST_PRACTICES
 ```
 
 ---
 
-## 🚀 Tecnologías
+#  Tecnologías
 
 - SQL Server
+- Azure Data Studio
+- SQL Server Management Studio (SSMS)
 - Git
 - GitHub
 
 ---
 
-## 📈 Estado
+#  Repositorios Relacionados
 
-Proyecto en construcción.
+Este roadmap forma parte de una colección enfocada en Ingeniería de Datos y Bases de Datos.
+
+- SQL Roadmap
+- Database Design Roadmap
+- ETL & ELT Roadmap
+- Data Warehouse Design
+- Data Modeling Roadmap *(Próximamente)*
+
+---
+
+#  Estado
+
+ En desarrollo continuo.
+
+Se agregarán nuevos módulos, ejercicios, casos de estudio y mejores prácticas conforme avance el roadmap.
+
+---
+
+#  Objetivo Final
+
+Al finalizar este roadmap serás capaz de:
+
+- Escribir consultas SQL profesionales.
+- Optimizar consultas complejas.
+- Diseñar estructuras de bases de datos.
+- Comprender cómo trabajan los DBAs.
+- Administrar bases de datos en producción.
+- Resolver problemas reales utilizando SQL.
+- Prepararte para entrevistas técnicas relacionadas con SQL, Bases de Datos y Data Engineering.
